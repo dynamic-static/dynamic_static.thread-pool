@@ -19,7 +19,7 @@ include("${external}/dynamic_static.time.cmake")
 # Target
 set(includeDirectory "${CMAKE_CURRENT_LIST_DIR}/include/")
 dst_add_interface_library(
-    target ${CMAKE_PROJECT_NAME}
+    target dynamic_static.thread-pool
     includeDirectories "${includeDirectory}"
     includeFiles "${includeDirectory}/dynamic_static/thread-pool.hpp"
 )
@@ -28,7 +28,7 @@ dst_add_interface_library(
 # Tests
 set(testsPath "${CMAKE_CURRENT_LIST_DIR}/tests/")
 dst_add_target_test(
-    target ${CMAKE_PROJECT_NAME}
+    target dynamic_static.thread-pool
     linkLibraries dynamic_static.time
     sourceFiles "${testsPath}/thread-pool.tests.cpp"
 )
